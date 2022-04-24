@@ -1,0 +1,40 @@
+  example:
+    student:
+      https://api-harrypotter.herokuapp.com/house/{houseKey}
+  houseKey:
+    student:
+      https://api-harrypotter.herokuapp.com/sortinghat
+  # DATASOURCE
+  spring:
+    datasource:
+      url:
+        jdbc:h2:file:./data/student
+
+      driverClassName:
+        org:
+          h2:
+            Driver
+      username:
+        rafa
+      password:
+        62325
+
+    # H2 Console
+
+    h2:
+      console:
+        enabled:
+          true
+
+        path:
+          /h2-console
+
+    # JPA
+    jpa:
+      database-platform:
+        org.hibernate.dialect.H2Dialect
+
+      hibernate:
+        ddl-auto:
+          update
+
